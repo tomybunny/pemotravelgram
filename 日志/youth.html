@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel="stylesheet" href="../css/index.css">
+    <link  rel="stylesheet" href="../css/dirary.css">
+    <title>youth的旅行日记</title>
+</head>
+<body>
+    <div class="imgpos">
+        <a href="../AddDiary.html"><img src="../imags/背景/4.png" alt="" width="380px"></a>
+    </div>
+    <div id="mainframe">
+        <div class="inner">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="inner">
+                        <ul class="nav1">
+                            <li class="nav1-item"><a href="../index.html">首页</a></li>
+                            <li class="nav1-item"><a href="../攻略/domestic.html">旅行攻略</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="../攻略/domestic.html">国内</a></li>
+                                    <li class="nav2-item"><a href="../攻略/oversea.html">国外</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="headliner.html">旅行日记</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="headliner.html">headliner</a></li>
+                                    <li class="nav2-item"><a href="hi_spring.html">hi_spring</a></li>
+                                    <li class="nav2-item"><a href="youth.html">youth</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="../AddDiary.html">写日记</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="headbg">
+                    <img src="../imags\背景\1.jpg" alt="" width="100%">
+                </div>
+                <div class="contain">
+                    <div class="inner">
+                        <div class="dir-con-1">
+                            <br>
+                            <ul class="nav4">
+                                <li class="nav4-item"><a href="headliner.html">headliner</a></li>
+                                <li class="nav4-item"><a href="hi_spring.html">hi_spring</a></li>
+                                <li class="nav4-item"><a href="youth.html">youth</a></li>
+                            </ul>
+                        </div>
+                        <div class="dir-con-2">
+                            <br>
+                            <div class="dir-1">
+                            <p class="p7">我爱釜山</p>
+                            <p class="p8">youth</p>
+                            <div class="runimg">
+                                <div class="showimg">
+                                    <ul>
+                                        <li style="display:block" id="a"><img src="../imags/釜山/3.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="b"><img src="../imags/釜山/4.jpg" alt="" width=100%></li>
+                                        </ul>
+                                    </div>
+                                    <button id="pre_pic" onclick="pre_pic()"><<</button>
+                                    <button id="next_pic" onclick="next_pic()">>></button>
+                                    <br><p class="p5">釜山烟花节</p>
+                                    <br>
+                                    <ul>
+                                        <li style="display:block" id="c"><img src="../imags/釜山/1.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="d"><img src="../imags/釜山/2.jpg" alt="" width=100%></li>
+                                    </ul>
+                                    <button id="pre" onclick="pre_pic()"><<</button>
+                                    <button id="next" onclick="next_pic()">>></button>
+                                    <script language="javascript">
+                                        var a=document.getElementById("a");
+                                        var b=document.getElementById("b");
+                                        var c=document.getElementById("c");
+                                        var d=document.getElementById("d");
+                                        var b1=document.getElementById("pre_pic");
+                                        var b2=document.getElementById("next_pic");
+                                        var b3=document.getElementById("pre");
+                                        var b4=document.getElementById("next");
+                                        var num=4;
+                                        b1.onclick=function(){   
+                                            num--;
+                                            if(num<1)
+                                                num=2;
+                                                panduan();
+                                        }
+                                        b2.onclick=function(){
+                                            num++;
+                                            if(num>2)
+                                                num=1;
+                                                panduan();    
+                                        }
+                                        b3.onclick=function(){   
+                                            num--;
+                                            if(num<3)
+                                                num=4;
+                                                panduan();
+                                        }
+                                        b4.onclick=function(){
+                                            num++;
+                                            if(num>4)
+                                                num=3;
+                                                panduan();    
+                                        }
+                                        function panduan(){
+                                            if(num==1){
+                                                a.style.display="none";
+                                                b.style.display="block";
+                                            }
+                                            if(num==2){
+                                                a.style.display="block";
+                                                b.style.display="none";
+                                            }
+                                            if(num==3){
+                                                c.style.display="none";
+                                                d.style.display="block";
+                                                }
+                                            if(num==4){
+                                                c.style.display="block";
+                                                d.style.display="none";
+                                            }
+                                        }   
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>

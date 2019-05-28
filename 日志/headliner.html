@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel="stylesheet" href="../css/index.css">
+    <link  rel="stylesheet" href="../css/dirary.css">
+    <title>headliner的旅行日记</title>
+</head>
+<body>
+    <div class="imgpos">
+        <a href="../AddDiary.html"><img src="../imags/背景/4.png" alt="" width="380px"></a>
+    </div>
+    <div id="mainframe">
+        <div class="inner">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="inner">
+                        <ul class="nav1">
+                            <li class="nav1-item"><a href="../index.html">首页</a></li>
+                            <li class="nav1-item"><a href="../攻略/domestic.html">旅行攻略</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="../攻略/domestic.html">国内</a></li>
+                                    <li class="nav2-item"><a href="../攻略/oversea.html">国外</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="">旅行日记</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="headliner.html">headliner</a></li>
+                                    <li class="nav2-item"><a href="hi_spring.html">hi_spring</a></li>
+                                    <li class="nav2-item"><a href="youth.html">youth</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="../AddDiary.html">写日记</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="headbg">
+                    <img src="../imags\背景\1.jpg" alt="" width="100%">
+                </div>
+                <div class="contain">
+                    <div class="inner">
+                        <div class="dir-con-1">
+                            <br>
+                            <ul class="nav4">
+                                <li class="nav4-item"><a href="headliner.html">headliner</a></li>
+                                <li class="nav4-item"><a href="hi_spring.html">hi_spring</a></li>
+                                <li class="nav4-item"><a href="youth.html">youth</a></li>
+                            </ul>
+                        </div>
+                        <div class="dir-con-2">
+                            <br>
+                            <div class="dir-1">
+                            <p class="p7">你好，北海道</p>
+                            <p class="p8">headliner</p>
+                            <p class="p4">乘车前往小樽，漫步北一哨子和八音盒馆。那里陈列着各式各样的音乐盒，充分体现了日式的精巧别致。但标志性的小樽运河，实地却并不如想象的诗情画意。我们特意等到黄昏时分，岸边的老式煤气灯已点开，以为会有点浪漫的调调。但怎么拍，都会拍下护栏，取景角度欠佳。还是最喜欢白色恋人巧克力工厂，像一个奇妙的童话世界。只有在北海道这样纯净的地方，才会有心思想到给巧克力饼干取“白色恋人”这样引人无限遐想的名字。晚餐时叫上一小瓶日式清酒，望着皑皑白雪，慢慢抿一口，嗯，很满足啦！</p>
+                            <div class="runimg">
+                                <div class="showimg">
+                                    <ul>
+                                        <li style="display:block" id="a"><img src="../imags/北海道/1.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="b"><img src="../imags/北海道/2.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="c"><img src="../imags/北海道/3.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="d"><img src="../imags/北海道/4.jpg" alt="" width=100%></li>
+                                    </ul>
+                                </div>
+                                <button id="pre_pic" onclick="pre_pic()"><<</button>
+                                <button id="next_pic" onclick="next_pic()">>></button>
+                                <script language="javascript">
+                                    var a=document.getElementById("a");
+                                    var b=document.getElementById("b");
+                                    var c=document.getElementById("c");
+                                    var d=document.getElementById("d");
+                                    var b1=document.getElementById("pre_pic");
+                                    var b2=document.getElementById("next_pic");
+                                    var num=4;
+                                    b1.onclick=function(){   
+                                        num--;
+                                        if(num<1)
+                                            num=4;
+                                            panduan();
+                                    }
+                                    b2.onclick=function(){
+                                        num++;
+                                        if(num>4)
+                                            num=1;
+                                            panduan();    
+                                    }
+                                    function panduan(){
+                                        if(num==1){
+                                            a.style.display="none";
+                                            b.style.display="block";
+                                            c.style.display="none";
+                                            d.style.display="none";
+                                        }
+                                        if(num==2){
+                                            a.style.display="none";
+                                            b.style.display="none";
+                                            c.style.display="block";
+                                            d.style.display="none";
+                                        }
+                                        if(num==3){
+                                            a.style.display="none";
+                                            b.style.display="none";
+                                            c.style.display="none";
+                                            d.style.display="block";
+                                            }
+                                        if(num==4){
+                                            a.style.display="block";
+                                            b.style.display="none";
+                                            c.style.display="none";
+                                            d.style.display="none";
+                                        }
+                                    }   
+                                </script>
+                            </div>
+                            <p class="p4"> 次日前往道央新雪谷，天空一直在飘雪，沿途三小时车程都是白雪皑皑的高山。所有的树都是干干净净的墨色枯枝，在白色背景下笔直伸向天空。住在新雪谷，我想这个堪比圣莫里茨的地方，我会有机会和宫大带YOYO一起来滑雪吗？每次出远门，我都在想：如果他们在身边，一起享受此刻美景，就更棒啦。</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>

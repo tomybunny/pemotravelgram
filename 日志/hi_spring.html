@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel="stylesheet" href="../css/index.css">
+    <link  rel="stylesheet" href="../css/dirary.css">
+    <title>hi_spring的旅行日记</title>
+</head>
+<body>
+    <div class="imgpos">
+        <a href="../AddDiary.html"><img src="../imags/背景/4.png" alt="" width="380px"></a>
+    </div>
+    <div id="mainframe">
+        <div class="inner">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="inner">
+                        <ul class="nav1">
+                            <li class="nav1-item"><a href="../index.html">首页</a></li>
+                            <li class="nav1-item"><a href="../攻略/domestic.html">旅行攻略</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="../攻略/domestic.html">国内</a></li>
+                                    <li class="nav2-item"><a href="../攻略/oversea.html">国外</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="">旅行日记</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="headliner.html">headliner</a></li>
+                                    <li class="nav2-item"><a href="hi_spring.html">hi_spring</a></li>
+                                    <li class="nav2-item"><a href="youth.html">youth</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="../AddDiary.html">写日记</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="headbg">
+                    <img src="../imags\背景\1.jpg" alt="" width="100%">
+                </div>
+                <div class="contain">
+                    <div class="inner">
+                        <div class="dir-con-1">
+                            <br>
+                            <ul class="nav4">
+                                <li class="nav4-item"><a href="headliner.html">headliner</a></li>
+                                <li class="nav4-item"><a href="hi_spring.html">hi_spring</a></li>
+                                <li class="nav4-item"><a href="youth.html">youth</a></li>
+                            </ul>
+                        </div>
+                        <div class="dir-con-2">
+                            <br>
+                            <div class="dir-1"> 
+                            <p class="p7">再见，阿姆斯特丹</p>
+                            <p class="p8">hi_spring</p>
+                            <p class="p4">飞机平稳停在了阿姆斯特丹机场，正是黄昏时节的荷兰，并没有沉浸在最后一片火烧云的余晖中，斑驳的阳光仍笼罩着大地。我稳步踏在这片土地上，小心翼翼地整理装束，以最佳的状态迎接这个计划短暂相处的国度。</p>
+                            <div class="runimg">
+                                <div class="showimg">
+                                    <ul>
+                                        <li style="display:block" id="a"><img src="../imags/阿姆斯特丹/1.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="b"><img src="../imags/阿姆斯特丹/2.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="c"><img src="../imags/阿姆斯特丹/3.jpg" alt="" width=100%></li>
+                                        <li style="display:none" id="d"><img src="../imags/阿姆斯特丹/4.jpg" alt="" width=100%></li>
+                                    </ul>
+                                </div>
+                                <button id="pre_pic" onclick="pre_pic()"><<</button>
+                                <button id="next_pic" onclick="next_pic()">>></button>
+                                <script language="javascript">
+                                    var a=document.getElementById("a");
+                                    var b=document.getElementById("b");
+                                    var c=document.getElementById("c");
+                                    var d=document.getElementById("d");
+                                    var b1=document.getElementById("pre_pic");
+                                    var b2=document.getElementById("next_pic");
+                                    var num=4;
+                                    b1.onclick=function(){   
+                                        num--;
+                                        if(num<1)
+                                            num=4;
+                                            panduan();
+                                    }
+                                    b2.onclick=function(){
+                                        num++;
+                                        if(num>4)
+                                            num=1;
+                                            panduan();    
+                                    }
+                                    function panduan(){
+                                        if(num==1){
+                                            a.style.display="none";
+                                            b.style.display="block";
+                                            c.style.display="none";
+                                            d.style.display="none";
+                                        }
+                                        if(num==2){
+                                            a.style.display="none";
+                                            b.style.display="none";
+                                            c.style.display="block";
+                                            d.style.display="none";
+                                        }
+                                        if(num==3){
+                                            a.style.display="none";
+                                            b.style.display="none";
+                                            c.style.display="none";
+                                            d.style.display="block";
+                                            }
+                                        if(num==4){
+                                            a.style.display="block";
+                                            b.style.display="none";
+                                            c.style.display="none";
+                                            d.style.display="none";
+                                        }
+                                    }   
+                                </script>
+                            </div>
+                            <p class="p4">阿姆斯特丹国立博物馆是一桩漂亮的红色建筑，每次穿行在广场上都能看到大水池里有许多嘻嘻的孩子和情侣，这么热的天气这里更显得热闹，广场里经常会搞一些推广展，上次来看到的米菲兔，这次没有活动推出，由于太晒了，我们快速通过这里。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>

@@ -1,0 +1,31 @@
+#formdiv{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+.imgup{
+    width:25%;
+}
+.submitbut{
+    text-align: center;
+    width: 100%;
+}
+.submit{
+    display: inline-block;
+    position: relative;
+    width:100px;
+    height:40px;
+    text-decoration: none;
+    text-align: center;
+    zoom: 1;
+    overflow: visible;
+    border: 1px solid #aed0ea;
+    border-radius: 7px;
+    background-color: #636B46;
+    font-size: 20px;
+    color: #fff;
+}

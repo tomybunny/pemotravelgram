@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel="stylesheet" href="css/index.css">
+    <link  rel="stylesheet" href="css/AddDirary.css">
+    <title>写日记</title>
+</head>
+<body>
+    <div class="imgpos">
+        <a href="AddDiary.html"><img src="imags/背景/4.png" alt="" width="380px"></a>
+    </div>
+    <div id="mainframe">
+        <div class="inner">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="inner">
+                        <ul class="nav1">
+                            <li class="nav1-item"><a href="index.html">首页</a></li>
+                            <li class="nav1-item"><a href="攻略/domestic.html">旅行攻略</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="攻略/domestic.html">国内</a></li>
+                                    <li class="nav2-item"><a href="攻略/oversea.html">国外</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="日志/headliner.html">旅行日记</a>
+                                <ul class="nav2">
+                                    <li class="nav2-item"><a href="日志/headliner.html">headliner</a></li>
+                                    <li class="nav2-item"><a href="日志/hi_spring.html">hi_spring</a></li>
+                                    <li class="nav2-item"><a href="日志/youth.html">youth</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav1-item"><a href="AddDiary.html">写日记</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="headbg">
+                    <img src="imags\背景\1.jpg" alt="" width="100%">
+                </div>
+                <div class="contain">
+                    <div class="inner">
+                        <div id="formdiv"><br>
+                            <br>
+                        <table class="innertable">
+                            <tr>
+                                <td>
+                                    <form action="" onsubmit="return sumbit_sure()">
+                                        <table class="addtable">
+                                            <tr>
+                                                <td class="answer">
+                                                    <ul class="listans">
+                                                        <li>
+                                                            <label>昵称</label>
+                                                            <span><input type="text" size="165"></span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="addtable">
+                                            <tr>
+                                                <td class="answer">
+                                                    <ul class="listans">
+                                                        <li>
+                                                            <label>题目</label>
+                                                            <span><input type="text" size="165"></span>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="addtable">
+                                            <tr>
+                                                <td class="imgup">
+                                                    <div class="uploadimg">
+                                                        <img id="photo1" src="" width=100% style="display: block;" />
+                                                        <input type="file" name="img1" id="img1" onchange="preImg(this.id,'photo1');" multiple/>
+                                                    </div>
+                                                    <script type="text/javascript">
+                                                        function getFileUrl(sourceId) {
+                                                            var url;
+                                                            if (navigator.userAgent.indexOf("MSIE")>=1) { // IE
+                                                                url = document.getElementById(sourceId).value;
+                                                            } else if(navigator.userAgent.indexOf("Firefox")>0) { // Firefox
+                                                                url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+                                                            } else if(navigator.userAgent.indexOf("Chrome")>0) { // Chrome
+                                                                url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+                                                            }
+                                                            return url;
+                                                        }
+                                                        function preImg(sourceId, targetId) {
+                                                            var url = getFileUrl(sourceId);
+                                                            var imgPre = document.getElementById(targetId);
+                                                            imgPre.src = url;
+                                                        }
+                                                    </script>
+                                                </td>
+                                                <td class="imgup">
+                                                    <img id="photo2" src="" width=100% style="display: block;" />
+                                                    <input type="file" name="img2" id="img2" onchange="preImg(this.id,'photo2');" multiple/>
+                                                </td>
+                                                <td class="imgup">
+                                                    <img id="photo3" src="" width=100% style="display: block;" />
+                                                    <input type="file" name="img3" id="img3" onchange="preImg(this.id,'photo3');" multiple/>
+                                                </td>
+                                                <td class="imgup">
+                                                    <img id="photo4" src="" width=100% style="display: block;" />
+                                                    <input type="file" name="img4" id="img4" onchange="preImg(this.id,'photo4');" multiple/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="addtable">
+                                            <tr>
+                                                <td>
+                                                    <label>日记正文</label>
+                                                </td>
+                                                <td>
+                                                    <textarea  rows="10" cols="170"></textarea>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="addtable">
+                                            <tr>
+                                                <td class="submitbut">
+                                                    <button class="submit" type="submit">提交 </button>
+                                                </td>
+                                            </tr> 
+                                        </table>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
